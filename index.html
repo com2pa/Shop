@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <title>Carrito de Compra</title>
+</head>
+<body>
+    
+    <nav id="nav-bar">
+        <div id="nav-content">
+            <h1 id="nav-title">Truth</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" id="shop-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+              <section class="cart">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="table-title">Imagen </th>
+                            <th class="table-title">Nombre</th>
+                            <th class="table-title">Precio</th>
+                            <th class="table-title">Cantidad</th>
+                            <th class="table-title">eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- <tr>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                        </tr> -->
+                    </tbody>
+                    <botton id="table-clear"> vaciar carrito</botton>
+                </table>
+              </section>
+        </div>
+    </nav>
+    <!-- seccion 1 hero -->
+    <section id="hero">
+        <div id="hero-content">
+            <h1 id="hero-title"> Aprende algo Nuevo !</h1>
+            <h2 id="hero-subtitle">Todos los cursos tiene un Costo de  15$</h2>
+            <div id="hero-input">
+                <input type="text"placeholder=" ¿ que te gustias aprender?">
+                <svg xmlns="http://www.w3.org/2000/svg" id="hero-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </div>              
+        </div>
+    </section>
+
+    <!-- seccion 2 info -->
+    <section id="info">
+        <div class="info-container">
+            <div class="info-div">
+                <svg xmlns="http://www.w3.org/2000/svg" class="info-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                  
+                  <p> +50000 cursos en Linea <br>
+                    explora los temas mas recientes
+                  </p>
+            </div>
+            <div class="info-div">
+                <svg xmlns="http://www.w3.org/2000/svg" class="info-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                </svg>
+                  
+                  <p> Instructores Expertos <br>
+                    aprende con diferente estilos
+                  </p>
+            </div>
+            <div class="info-div">
+                <svg xmlns="http://www.w3.org/2000/svg" class="info-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  
+                  <p> Acceso de por vida <br>
+                    aprende a tu ritmo
+                  </p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <!-- seccion 3 cursos (courses)-->
+
+    <section id="courses">
+        <div class="courses-container">
+            <h3 id="title"> Cursos en Linea</h3>
+            <ul id="courses-list">
+                <li class="courses-item">
+                    <div class="courses-img">
+                        <img src="img/curso-1.jpg" alt="curso-1" class="course-info-img">
+                    </div>
+                    <div class="courses-info">
+                        <h3 id="course-title">HTML , CSS, JAVASCRIPT</h3>
+                        <p>Merwil Vegas</p>
+                        <p> Principiante</p>
+                        <p class="course-price"> 15$</p>
+                        <button class="course-btn"> agregar al carrito</button>
+                    </div>
+                </li>
+                <li class="courses-item">
+                    <div class="courses-img">
+                        <img src="img/curso-2.jpg" alt="curso-2" class="course-info-img">
+                    </div>
+                    <div class="courses-info">
+                        <h3 id="course-title">Aprende todo sobre guitarra Electrica</h3>
+                        <p>Merwil Vegas</p>
+                        <p> Principiante</p>
+                        <p class="course-price"> 15$</p>
+                        <button class="course-btn"> agregar al carrito</button>
+                    </div>
+                </li>
+                <li class="courses-item">
+                    <div class="courses-img">
+                        <img src="img/curso-3.jpg" alt="curso-3" class="course-info-img">
+                    </div>
+                    <div class="courses-info">
+                        <h3 id="course-title">Tortas 101</h3>
+                        <p>Merwil Vegas</p>
+                        <p> Principiante</p>
+                        <p class="course-price"> 15$</p>
+                        <button class="course-btn"> agregar al carrito</button>
+                    </div>
+                </li>
+                <li class="courses-item">
+                    <div class="courses-img">
+                        <img src="img/curso-4.jpg" alt="curso-4" class="course-info-img">
+                    </div>
+                    <div class="courses-info">
+                        <h3 id="course-title">React 18</h3>
+                        <p>Merwil Vegas</p>
+                        <p> Principiante</p>
+                        <p class="course-price"> 15$</p>
+                        <button class="course-btn"> agregar al carrito</button>
+                    </div>
+                </li>
+                <li class="courses-item">
+                    <div class="courses-img">
+                        <img src="img/curso-5.jpg" alt="curso-5" class="course-info-img">
+                    </div>
+                    <div class="courses-info">
+                        <h3 id="course-title">De 0 a 100 Dj</h3>
+                        <p>Merwil Vegas</p>
+                        <p> Principiante</p>
+                        <p class="course-price"> 15$</p>
+                        <button class="course-btn"> agregar al carrito</button>
+                    </div>
+                </li>
+                <li class="courses-item">
+                    <div class="courses-img">
+                        <img src="img/curso-6.jpg" alt="curso-6" class="course-info-img">
+                    </div>
+                    <div class="courses-info">
+                        <h3 id="course-title">Todo sobre motores</h3>
+                        <p>Merwil Vegas</p>
+                        <p> Principiante</p>
+                        <p class="course-price"> 15$</p>
+                        <button class="course-btn"> agregar al carrito</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
+

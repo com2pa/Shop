@@ -1,0 +1,335 @@
+*,::before,
+::after{
+    box-sizing: border-box;
+    /* 1 */
+    border-width: 0;
+    /* 2 */
+    border-style: solid;
+    /* 2 */
+    border-color:#e5e7eb ;
+    /* 2 */
+}
+
+
+h1,h2,p{
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 4rem;
+    position: relative;
+    font-family: 'Lato',sans-serif;
+}
+#nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #C5FFF8;
+    height: 4rem;
+    z-index: 10; /*estara el naveagdor por encima del contenido al scrolear*/
+}
+#shop-icon{
+    width: 4rem;
+    height: 3rem;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight:700 ;
+    cursor: pointer;
+    transition:  all 0.3s  ease-in;
+    color:aqua;
+}
+
+#shop-icon:hover{
+    background-color: #5FBDFF;
+}
+#nav-content{
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;/*padre*/
+}
+
+#nav-title{
+    color: #fff;
+}
+.cart{
+    position: absolute;/*hijo*/
+    top: 4rem;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(209, 205, 205, 0.808);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    overflow: auto;
+    transition:  all 0.3s  ease-in;
+}
+table{
+    table-layout:fixed ;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td{
+    height: 6rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    border-bottom:1px solid black ;
+}
+thead{
+    height: 2rem;
+    border-bottom:1px solid black ;
+
+}
+
+#table-clear{
+    cursor: pointer;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: red;
+    font-weight: 700;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition:  all 0.3s  ease-in;
+    text-align: center;
+}
+#table-clear:hover{
+    background-color: rgb(117, 7, 7);
+   
+
+
+}
+.show-cart{
+    height: 25rem;
+    padding: 1rem;
+    transition:  all 0.3s  ease-in;
+}
+
+#hero-icon{
+    width: 2.9rem;
+    height: 2.9rem;
+    padding: 0.5rem;
+    color: aqua;
+    background-color: #8080802e;
+
+}
+#hero{
+    height: calc(100vh - 4rem);
+    background-image: url(img/hero-image.jpg);
+    background-position: center; 
+     background-size:cover;
+    padding: 0 1rem;
+} 
+
+#hero-content{
+     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white; 
+    max-width: 80rem;
+    margin: 0 auto;
+}
+#hero-title{
+    font-size: 2rem;
+    /* width: 100%;*/
+    text-align: center; 
+} 
+ #hero-input{
+    display: flex;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* width: 80%; */
+    padding: 0.5rem;
+} 
+input{
+    width: 80%;
+    background-color: transparent;
+    outline: none;
+    font-size: 0.80rem;
+}
+.info{
+    padding: 1rem;
+    /* height: calc(10vh); */
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    background-color: #7EA1FF;
+    color: #fff;
+}
+.info-icon{
+    width: 2rem;
+    height:2rem;
+    padding: 0.5rem;
+    color: aqua;
+    /* background-color: #8080802e; */
+   
+}
+.info-div{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid white;
+    padding: 0.5rem;
+    
+}
+.course-info-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*cumple la funcion de resposive de la imagen ->background-size:cover*/
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+#courses{
+    min-height: 100vh;
+    padding: 0 1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.courses-container{
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+}
+.course-title{
+    font-weight: 700;/*negrita*/
+    font-size: 1.3rem;
+    text-align: center;    
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+#title{
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+#courses-list{
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.courses-item{
+    background-color: rgb(212, 203, 203);
+    border-radius: 0.5rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: scale(1);
+    transition:  all 0.3s  ease-in;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.courses-item:hover{
+    transform: scale(1.05);
+}
+.courses-img{
+    height: 40%;
+    
+
+    
+}
+.courses-info{
+    height: 60%;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+
+#course-title, .course-price{
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+.delete-btn{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.course-btn{
+    padding: 1rem;
+    font-weight: 700;
+    background-color: aqua;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s  ease-in;
+}
+.course-btn:hover{
+    background-color: rgb(2, 148, 148);
+
+}
+@media(min-width:640px){
+    .cart{
+        width: 50%;
+    }
+    #hero-content{
+    align-items: flex-start;
+    }
+    #hero{
+        height: calc(50vh -4rem);
+    }
+    .info-container{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        
+    }
+    .info-div{
+        border: none;
+    }
+    .courses-item{
+        width:40% ;
+    }
+    #courses-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media(min-width:1024px){
+    .courses-item{
+        width:30% ;
+    }
+    #courses-list{
+        gap: 3rem;
+    }
+    
+    
+}
+@media(min-width:1440px){
+    #info{
+        width: 100%;
+        background-color: #7EA1FF;
+    }
+}
