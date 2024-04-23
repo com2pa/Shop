@@ -1,12 +1,17 @@
 
 // selector 
 const shopIcon=document.querySelector('#shop-icon')
-// console.log(shopIcon);
+// const heroIcon=document.querySelector('#hero-icon')
+// console.log(heroIcon);
 const cart = document.querySelector('.cart')
 const table = document.querySelector('#table-body')
 const courseBtn = document.querySelectorAll('.course-btn')
 const tableClear = document.querySelector('#table-clear')
 
+const buscador = document.querySelector('#buscador')//input
+const listaCursos =document.querySelector('#courses-list')//ul
+const nombreCurso = document.querySelectorAll('#course-title')
+// console.log(buscador);
 // paso 2 -creando evento apra los btones
 
 courseBtn.forEach(btn => {
@@ -67,4 +72,25 @@ shopIcon.addEventListener('click',e=>{
 // vaciar carrito
 tableClear.addEventListener('click',e=>{
     table.innerHTML='';
+})
+
+
+
+// buscador
+
+buscador.addEventListener('keyup',e=>{
+    const busqueda = e.target.value.toLowerCase()
+    
+    // console.log(busqueda);
+    listaCursos.innerHTML='';
+    console.log(listaCursos);
+    nombreCurso.forEach(element => {
+        if(element.textContent.toLowerCase().includes(busqueda)){
+            listaCursos.appendChild(element.parentElement)
+        }else{
+            // const texto = 'No existe este curso'
+            // listaCursos.innerHTML=`<li>${texto}</li>`
+        }
+        
+    });
 })

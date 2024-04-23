@@ -288,6 +288,9 @@ input{
     background-color: rgb(2, 148, 148);
 
 }
+.filto{
+    display: none;
+}
 @media(min-width:640px){
     .cart{
         width: 50%;
