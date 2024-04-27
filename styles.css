@@ -291,6 +291,14 @@ input{
 .filto{
     display: none;
 }
+
+.visible{
+    display: block;
+}
+.noVisible{
+    display: none;
+}
+
 @media(min-width:640px){
     .cart{
         width: 50%;

@@ -9,9 +9,11 @@ const courseBtn = document.querySelectorAll('.course-btn')
 const tableClear = document.querySelector('#table-clear')
 
 const buscador = document.querySelector('#buscador')//input
-const listaCursos =document.querySelector('#courses-list')//ul
+const lista =document.querySelectorAll('#courses-list')//ul
+const cursos=document.querySelectorAll('.courses-item')//li
 const nombreCurso = document.querySelectorAll('#course-title')
-// console.log(buscador);
+const botonBusqueda = document.querySelector('#hero-icon')
+const texto=document.querySelector('#texto')
 // paso 2 -creando evento apra los btones
 
 courseBtn.forEach(btn => {
@@ -81,16 +83,23 @@ tableClear.addEventListener('click',e=>{
 buscador.addEventListener('keyup',e=>{
     const busqueda = e.target.value.toLowerCase()
     
-    // console.log(busqueda);
-    listaCursos.innerHTML='';
-    console.log(listaCursos);
-    nombreCurso.forEach(element => {
-        if(element.textContent.toLowerCase().includes(busqueda)){
-            listaCursos.appendChild(element.parentElement)
-        }else{
-            // const texto = 'No existe este curso'
-            // listaCursos.innerHTML=`<li>${texto}</li>`
-        }
-        
-    });
+     if(busqueda){
+        console.log(busqueda)
+        cursos.forEach(curso =>{
+            const nombre = curso.children[1].textContent.toLowerCase()
+            if(nombre.includes(busqueda)){
+                // curso.style.display='flex'
+                curso.classList.add('visible');
+            }else{
+                curso.classList.add('noVisible');
+                
+                
+                
+            }
+        })
+
+
+    }
+    
 })
+
